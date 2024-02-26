@@ -166,18 +166,17 @@ img {
 }
 
 .nav__logo,
-.nav__toggle,
+.nav__toggle
 .nav__close{
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   color: var(--title-color);
-  
 }
 
 .nav__logo{
-  font-size: var(--h3-font-size);
   font-family: var(--second-font);
+  font-size: var(--h3-font-size);
   column-gap: .25rem;
 }
 
@@ -228,21 +227,23 @@ row-gap: 2.5rem;
   right:1.5rem;
 }
 
-.nav__img1,.nav__img2{
-filter: var(--filter-img);
-position: absolute;
+
+.nav__img-1,
+.nav__img-2{
+  filter:var(--filter-img);
+  position: absolute;
 }
 
-.nav__img1{
-  width: 150px;
-  top: -2.5rem;
+.nav__img-1{
+  width:150px;
+  top:-2.5rem;
   left: -3.5rem;
   rotate:180deg;
 }
 
-.nav__img2{
-  width: 50px;
-  bottom: 2.5rem;
+.nav__img-2{
+  width:50px;
+  top:2.5rem;
   right: 2.5rem;
 }
 
