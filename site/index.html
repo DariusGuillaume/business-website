@@ -133,6 +133,7 @@
 
     <secction class="section hero has-bg-image" aria-label="home" style="background-image: url('assets/images/hero-bg.jpg')">
         <div class="container">
+
             <div class="hero-content">
                 <h1 class="hero-title">Welcome to Brand</h1>
                 <p class="hero-text">We provide the best services for your business</p>
@@ -140,25 +141,51 @@
 
                     <a href="#" class="btn btn-primary">Explore</a>
 
-                <a href="#services" class="btn btn-primary">Our Services</a>
+                <a href="#services" class="btn btn-secondary">Our Services</a>
             </div>
         </div>
 
         <div class="hero-slider" data-slider>
+
             <div class="slider-innner" > 
                 <ul class = "slider-container" data-slider-container>
                     <li class = "slider-item" data-slider-item>
 
-                    <figure class = "img-holder" style="--width: ; --height: ;">
+                    <figure class = "img-holder" style="--width: 575 ; --height: 550 ;">
                         <img src = "./assets/images/hero-slide-1.jpg" width="575" height="550" alt = "" class="img-cover">
-
-
                     </figure>
                     </li>
-                  
+
+                    <li class = "slider-item" >
+                    <div class = "hero-card">
+                    <figure class = "img-holder" style="--width: 575 ; --height: 550 ;">
+                        <img src = "./assets/images/hero-slide-2.jpg" width="575" height="550" alt = "hero banner" class="img-cover">
+                    </figure>
+
+                    <button class = "play-btn" aria-label="start intro">
+                        <ion-icon name = "play-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                 </div>
+                </li>
+
+                <li class = "slider-item" >
+                    <figure class = "img-holder" style="--width: 575 ; --height: 550 ;">
+                        <img src = "./assets/images/hero-slide-3.jpg" width="575" height="550" alt = "hero banner" class="img-cover">
+                    </figure>
+                </li>
+
+
 
                 </ul>
             </div>
+
+            <button class="slider-btn prev" aria-label="previous slide" data-slider-prev>
+                <ion-icon name = "arrow-back" ></ion-icon>
+            </button>
+
+            <button class="slider-btn next" aria-label="next slide" data-slider-prev>
+                <ion-icon name = "arrow-forward" ></ion-icon>
+            </button> 
 
 
     </div>

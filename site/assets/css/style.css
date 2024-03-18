@@ -182,7 +182,61 @@ body {font-size: 1.6rem;
  transform: translateY(-3px);
 }
 
+.section {
+  padding-block: var(--section-padding);
+ }
 
+ .has-bg-image{
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+ }
+
+  
+ .h1, .h2, .h3, .h4, .h5 {
+  font-weight: var(--fw-700);
+  color: var(--charcoal);
+  line-height: 1.3;
+  margin-block: 0.5em;
+ }
+
+  .h1 {font-size: var(--fs-1);}
+  .h2 {font-size: var(--fs-2);}
+  .h3 {font-size: var(--fs-3);}
+
+  .h4 {font-size: var(--fs-4);}
+
+  .h5 {font-size: var(--fs-6);}
+
+  .btn{
+    font-size: var(--fs-6);
+    font-weight: var(--fw-700);
+    color: var(--black);
+    border-radius: var(--radius-pill);
+    padding: 12px 28px;
+    max-width: max-content;
+    border: 2px solid var(--black-coral);
+    transition: var(--transition-1);
+    will-change: transform;
+  
+  }
+
+
+  .btn:is(:hover, :focus-visible) {
+    transform: translateY(-4px);
+  }
+
+
+  .btn-primary {
+    color: var(--white);
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  .btn-primary:is(:hover, :focus-visible) {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+  }
 
 /*-----------------------------------*\
   #HEADER
