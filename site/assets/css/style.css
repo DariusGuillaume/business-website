@@ -238,6 +238,24 @@ body {font-size: 1.6rem;
     border-color: var(--secondary-color);
   }
 
+  .img-holder{
+    aspect-ratio: var(--width)/var(--height);
+    background-color: var(--light-gray);
+    overflow: hidden;
+  }
+
+  .img-cover{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  
+  }
+
+  
+
+
+
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
