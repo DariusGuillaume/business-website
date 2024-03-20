@@ -1,17 +1,13 @@
 'use strict';
 
-
-//** add event listener */
-
+// Add event listener function
 const addEventListener = function (elements, eventType, callback) { 
     for(let i = 0, len = elements.length; i<len;  i++) {
         elements[i].addEventListener(eventType, callback);
     }
 }
 
-
-//** nav toggle mobile */
-
+// Navigation toggle for mobile
 const navbar = document.querySelector("[data-navbar]");
 const navToggle = document.querySelectorAll("[data-nav-toggler]");
 const overlay = document.querySelector("[data-overlay]");
@@ -23,9 +19,7 @@ const toggleNav = function () {
 }
 addEventListener(navToggle, "click", toggleNav);
 
-
-//** header active header on scroll */
-
+// Header active state on scroll
 const header = document.querySelector("[data-header]");
 
 window.addEventListener("scroll", function () {
@@ -36,53 +30,39 @@ window.addEventListener("scroll", function () {
     }
 })
 
-
+// Initialize sliders
 const sliders = document.querySelectorAll("[data-slider]");
 
 const initSlider = function (currentSlider) {
-
     const sliderContainer = currentSlider.querySelector("[data-slider-container]");
     const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
     const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
 
     let currentSlide = 0;
 
-    const moveSlider = function (direction) {
-        sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlide].offsetLeft}px)`;
-
+    const moveSlider = function () {
+        sliderContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
     }
 
-
-const slideNext = function () {
-    const slideEnd = currentSlide >= sliderContainer.childElementCount - 1;
-
-    if (slideEnd) {
-        currentSlide = 0;
-    } else {
-        currentSlide++;
+    const slideNext = function () {
+        currentSlide = (currentSlide + 1) % sliderContainer.children.length;
+        moveSlider();
     }
-    moveSlider();
+
+    const slidePrev = function () {
+        currentSlide = (currentSlide - 1 + sliderContainer.children.length) % sliderContainer.children.length;
+        moveSlider();
+    }
+
+    sliderNextBtn.addEventListener("click", slideNext);
+    sliderPrevBtn.addEventListener("click", slidePrev);
+
+    if (sliderContainer.children.length <= 1) {
+        sliderNextBtn.style.display = "none";
+        sliderPrevBtn.style.display = "none";
+    }
 }
-sliderNextBtn.addEventListener("click", slideNext);
 
-const slidePrev = function () {
-    if(currrentSlide <= 0) {
-        currentSlide =sliderContainer.childElementCount - 1;
-    }
-    else {
-        currentSlide--;
- 
-    }
-    moveSlider();}
-    
-sliderPrevBtn.addEventListener("click", slidePrev);
-
-const notExtraItem = sliderContainer.childElementCount <=1;
-if(notExtraItem) {
-    sliderNextBtn.style.display = "none";
-    sliderPrevBtn.style.display = "none";
-}
-}
-for(let i = 0, len = sliders.length; i<len;  i++) {
+for (let i = 0; i < sliders.length; i++) {
     initSlider(sliders[i]);
 }

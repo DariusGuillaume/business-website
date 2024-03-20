@@ -302,7 +302,7 @@ body {font-size: 1.6rem;
 }
 
 .header .logo-dark, .header.active .logo-dark {
-  display: block;
+  display: none;
 }
 
 .nav-open-btn{
@@ -435,7 +435,7 @@ padding-block: 6px;
   transform: translate(-50%, -50%);
   font-size: 2rem;
   color: var(--charcoal);
-  background-color: var(--primary-color);
+  background-color: var(--white_a70);
   border-radius: var(--radius-circle);
   padding: 25px;
   transition: var(--transition-1);
@@ -505,7 +505,7 @@ overflow: hidden;
 }
 
 
-/*-----------------------------------*\
+/*-----------------------------------*\ 
   #SERVICE
 \*-----------------------------------*/
 
