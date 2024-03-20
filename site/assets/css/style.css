@@ -197,7 +197,7 @@ body {font-size: 1.6rem;
   font-weight: var(--fw-700);
   color: var(--charcoal);
   line-height: 1.3;
-  margin-block: 0.5em;
+
  }
 
   .h1 {font-size: var(--fs-1);}
@@ -399,7 +399,7 @@ padding-block: 6px;
   #HERO
 \*-----------------------------------*/
 .hero{
-  padding-block-start: calc(var(--section-padding)+76px);
+  padding-block-start: calc(var(--section-padding)+70px);
   text-align: center;
 }
 
@@ -416,7 +416,7 @@ padding-block: 6px;
   font-size: var(--fs-5);
   margin-block: 24px 36px;
 
-}
+}  
 
 .btn-wrapper{
   display: flex;
@@ -435,7 +435,7 @@ padding-block: 6px;
   transform: translate(-50%, -50%);
   font-size: 2rem;
   color: var(--charcoal);
-  background-color: var(--white_a70);
+  background-color: var(--white);
   border-radius: var(--radius-circle);
   padding: 25px;
   transition: var(--transition-1);
@@ -458,7 +458,7 @@ padding-block: 6px;
   }
 }
 
-.hero-slider .slider-inner {
+.hero .slider-inner {
 border-radius: var(--radius-10);
 overflow: hidden;
 }
@@ -466,14 +466,14 @@ overflow: hidden;
 .hero .slider-container {
   position: relative;
   display:flex;
-  align-items: center;
+  align-items: flex-start;
   gap:8px;
   transition: var(--transition-2);
 }
 
 .hero .slider-item {
+  min-width: 100%;
   width: 100%;
-  height: 100%;
  overflow: hidden;
   border-radius: var(--radius-10);
 }
