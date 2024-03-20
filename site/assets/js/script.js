@@ -35,3 +35,54 @@ window.addEventListener("scroll", function () {
         header.classList.remove("active");
     }
 })
+
+
+const sliders = document.querySelectorAll("[data-slider]");
+
+const initSlider = function (currentSlider) {
+
+    const sliderContainer = currentSlider.querySelector("[data-slider-container]");
+    const sliderPrevBtn = currentSlider.querySelector("[data-slider-prev]");
+    const sliderNextBtn = currentSlider.querySelector("[data-slider-next]");
+
+    let currentSlide = 0;
+
+    const moveSlider = function (direction) {
+        sliderContainer.style.transform = `translateX(-${sliderContainer.children[currentSlide].offsetLeft}px)`;
+
+    }
+
+
+const slideNext = function () {
+    const slideEnd = currentSlide >= sliderContainer.childElementCount - 1;
+
+    if (slideEnd) {
+        currentSlide = 0;
+    } else {
+        currentSlide++;
+    }
+    moveSlider();
+}
+sliderNextBtn.addEventListener("click", slideNext);
+
+const slidePrev = function () {
+    if(currrentSlide <= 0) {
+        currentSlide =sliderContainer.childElementCount - 1;
+    }
+    else {
+        currentSlide--;
+ 
+    }
+    moveSlider();}
+    
+sliderPrevBtn.addEventListener("click", slidePrev);
+
+const notExtraItem = sliderContainer.childElementCount <=1;
+if(notExtraItem) {
+    sliderNextBtn.style.display = "none";
+    sliderPrevBtn.style.display = "none";
+}
+}
+for(let i = 0, len = sliders.length; i<len;  i++) {
+    initSlider(sliders[i]);
+}
