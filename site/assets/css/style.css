@@ -728,3 +728,114 @@ transition: var(--transition-1);
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+/** responsive for large devices */
+
+@media (min-width: 575px) {
+  
+
+/*Reused style */
+.container {
+  max-width: 540px;
+  width: 100%;
+  margin-inline: auto;
+
+
+}
+
+
+/*main*/
+
+
+
+
+
+
+
+}
+
+/** responsive for medium devices */
+
+@media (min-width: 768px) {
+
+:root{
+  --section-padding: 120px;
+
+}
+
+  /*Reused style */
+
+  .container{
+    max-width: 720px;}
+  
+    .grid-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* Adjust the number of columns as needed */
+      gap: 20px; /* Adjust the gap between grid items */
+    }
+
+    /**Service */
+
+    .service .section-title {
+      max-width: 30ch;
+      margin-inline:auto; 
+    }
+
+    .service-card {
+      /* Add any styling for individual service cards */
+      height: 100%; /* Ensure all cards have the same height */
+      padding: 20px; /* Add padding to the cards for spacing */
+      border: 1px solid #ccc; /* Add border for better visibility */
+      border-radius: 8px; /* Add border radius for rounded corners */
+      background-color: #f9f9f9; /* Add background color for better visibility */
+      display: flex; /* Ensure content inside the card is vertically centered */
+      flex-direction: column; /* Align content vertically */
+    }
+
+
+  
+
+
+  .header .btn{
+    display: block;
+    margin-inline-start: auto;
+    padding:8px 20px;
+  }
+
+  .header.active .btn {
+  background-color: var(--primary-color);
+  color: var(--white);
+  border-color: var(--primary-color);
+  
+  }
+
+  /**Hero */
+
+  .hero-content{
+    max-width: 85%;
+    margin-inline: auto;
+  }
+
+  .hero-text{ --fs-5: 1.9rem; }
+
+    /**About */
+
+    .about .container {
+      grid-template-columns: 1fr 0.7fr; /* Adjust the number of columns as needed */
+      align-items: center;
+    }
+
+
+
+  }
+
+
+
+
+/** responsive for large devices */
+
+@media (min-width:992px){
+
+  
+}
+
