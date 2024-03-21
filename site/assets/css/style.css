@@ -667,6 +667,60 @@ transition: var(--transition-1);
   #FOOTER
 \*-----------------------------------*/
 
+.footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding-block: 60px 100px;
+  text-align: center;
+
+}
+
+.footer-brand .foot-text {
+  margin-block-end: 20px;
+
+}
+
+.footer .social-list {
+  color:var(--white);
+}
+
+.footer-list-title{
+  color:var(--white);
+  margin-block-end: 16px;
+
+}
+
+.footer-link{
+  padding-block: 4px;
+  transition: var(--transition-1);
+}
+
+.footer-link:is(:hover, :focus-visible) {
+  color: var(--accent-color);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-social .social-list {
+  display: flex;
+  gap: 18px; /* Adjust the gap between social icons */
+}
+
+.footer-social-link {
+  font-size: 2.5rem;
+  color: var(--white);
+  transition: color var(--transition-1);
+}
+
+.footer-social-link:hover {
+  color: var(--accent-color);
+}
+
+
 
 
 
