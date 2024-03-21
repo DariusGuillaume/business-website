@@ -836,6 +836,141 @@ transition: var(--transition-1);
 
 @media (min-width:992px){
 
+  /**Reused style */
+
+  .container {
+    max-width: 960px;
+  }
+
+  /**Header */
+
+  .nav-open-btn,.navbar > *:not(.navbar-list), .overlay{
+    display: none;
+  }
+
+  .navbar, .navbar-active {
+    all:unset ; 
+    display:block; 
+    margin-inline:auto 24px;
+  } 
+
+  .navbar-list { 
+    display: flex;
+    gap: 24px;
+  }
+
+  .navbar-link {
+    color:var(--black);
+    transition: var(--transition-1);
+  }
+
+  .navbar-link:is(:hover, :focus-visible) {
+    opacity: 0.9;
+  }
+
+  .header.active .navbar-link{
+    color: var(--charcoal);
+  }
+
+  .header.active .navbar-link:is(:hover, :focus-visible) {
+    color: var(--primary-color);
+    opacity: 1;
+  }
+
+  .header .btn{
+    margin-inline-start: 0;
+  } 
+
+   /*Hero */
+
+   .hero {
+    padding-block-start: calc(var(--section-padding) + 100px);
+    text-align: left;
+   }
+
+    .hero .container {
+      grid-template-columns: 1fr 0.8fr;
+      align-items: center;
+      gap: 100px;
+    }
+  
+
+    .hero-content{
+      max-width: unset;
+      margin-inline: 0;
+    }
+
+    .btn-wrapper {
+     justify-content: flex-start;
+    }
+
+    /**cta */
+
+    .cta .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .cta .btn{
+      min-width: max-content;
+    }
+
+    .cta .section-title {
+      max-width: 30ch;
+      margin-block-end: 0;
+    }
+
+    /**Footer */
+
+    .footer .grid-list {
+     grid-template-columns: repeat(3,1fr); /* Adjust the number of columns as needed */
+    }
+}
+
+/** responsive for 1200px devices */
+
+@media (min-width: 1200px) {
+  :root {
+    --section-padding: 150px;
+  }
+
+  .container {
+    max-width: 1140px;
+  }
+
+  /**hero */
+  .hero-text {
+    padding-inline-end: 100px;
+  }
+/*service */
+
+.service .grid-list
+{
+  grid-template-columns: repeat(3, 1fr);
+}
+/*footer */
+
+address.footer-text {
+  padding-inline-end: 100px;
+  margin-block-end: 16px;
+}
+
+
+
+
+
+}
+
+
+/** responsive for 1400px devices */
+
+@media(min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+
   
 }
+
 
