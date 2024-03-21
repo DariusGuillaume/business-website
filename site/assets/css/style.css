@@ -632,36 +632,35 @@ transition: var(--transition-1);
 }
 
 
-/*-----------------------------------*\
-  #FEATURES
-\*-----------------------------------*/
 
 
 
 
 
 /*-----------------------------------*\
-  #STATS
+  #Call
 \*-----------------------------------*/
 
+.cta{
+  background-color: var(--primary-color);
 
+}
 
+.cta .container {
+  border-block-end: 1px solid var(--dark-gray);
+  padding-block: 100px 60px;
+}
 
+.cta .section-title {
+  color: var(--white);
+  margin-block-end: 50px;
+}
 
-/*-----------------------------------*\
-  #PROJECT
-\*-----------------------------------*/
-
-
-
-
-
-/*-----------------------------------*\
-  #CTA
-\*-----------------------------------*/
-
-
-
+.cta .btn {
+  background-color: var(--violet-blue-crayola);
+  color: var(--white);
+ border: none;
+}
 
 
 /*-----------------------------------*\
